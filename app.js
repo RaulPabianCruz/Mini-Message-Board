@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('node:path');
+const newRoute = require('./routes/new');
 
 const app = express();
 app.set('views', path.join(__dirname, 'views'));
@@ -11,6 +12,8 @@ app.use(express.static(assetsPath));
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });
+
+app.use('/new', newRoute);
 
 app.use((err, req, res, next) => {
     console.error(err);
