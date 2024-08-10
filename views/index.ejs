@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Index Page</title>
+    </head>
+    <body>
+        <h1><%= title %></h1>
+        <ul>
+            <% for(let i = 0; i < messages.length; i += 1) { %>
+                <li>
+                    <div>
+                        <p> text: <%=  messages[i].text %></p>
+                        <p> user: <%= messages[i].user %></p>
+                        <p> date: <%= messages[i].added %></p>
+                    </div>
+                </li>
+            <% } %>
+        </ul>
+    </body>
+</html>
