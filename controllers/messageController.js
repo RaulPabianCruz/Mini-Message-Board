@@ -20,4 +20,9 @@ const getMessages = (req, res) => {
     res.render('index', { title: 'Mini Message Board', messages: messages });
 }
 
-module.exports = { postNewMssg, getMessages };
+const getMessageById = (req, res) => {
+    const mssgIndex = req.params.mssgId;
+    res.render('message', { message: messages[mssgIndex] });
+}
+
+module.exports = { postNewMssg, getMessages, getMessageById };
