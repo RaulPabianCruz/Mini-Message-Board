@@ -1,7 +1,7 @@
 const { Client } = require('pg');
 
 const SQL = `
-    CREATE TABLE IF NOT EXISTS message_db (
+    CREATE TABLE IF NOT EXISTS messagebrd (
     id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     msg VARCHAR(150),
     name VARCHAR(25),
@@ -18,7 +18,7 @@ async function main() {
         connectionString = process.env.CONNECTION_STRING;
 
     const client = new Client({ connectionString: connectionString });
-    
+
     try{
         await client.connect();
         await client.query(SQL);
