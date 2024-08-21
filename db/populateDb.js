@@ -17,6 +17,8 @@ async function main() {
     else
         connectionString = process.env.CONNECTION_STRING;
 
+    console.log('connectionString: ' + connectionString);
+
     const client = new Client({ connectionString: connectionString });
 
     try{
