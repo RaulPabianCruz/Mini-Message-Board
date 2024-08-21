@@ -8,10 +8,10 @@
             <% for(let i = 0; i < messages.length; i += 1) { %>
                 <li>
                     <div>
-                        <p> text: <%=  messages[i].text %></p>
-                        <p> user: <%= messages[i].user %></p>
-                        <p> date: <%= messages[i].added %></p>
-                        <div><a href="<%= i %>">Open</a></div>
+                        <p> text: <%=  messages[i].msg %></p>
+                        <p> user: <%= messages[i].name %></p>
+                        <p> date: <%= messages[i].dateadded %></p>
+                        <div><a href="<%= i + 1 %>">Open</a></div>
                     </div>
                 </li>
             <% } %>

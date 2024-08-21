@@ -4,11 +4,12 @@
     </head>
     <body>
         <h1>New Message Form</h1>
+        <%- include('partials/errors.ejs') %>
         <form method='POST' action="/new">
             <label for="author-input">Author:</label>
-            <input type="text" id="author-input" name="user">
+            <input type="text" id="author-input" name="name">
             <label for="mssg-input">Message:</label>
-            <input type="text" id="mssg-input" name="text">
+            <input type="text" id="mssg-input" name="msg">
             <button type="submit">Submit</button>
         </form>
         <div><a href="/">Back</a></div>
