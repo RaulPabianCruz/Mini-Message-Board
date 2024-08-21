@@ -27,7 +27,7 @@ async function main() {
         console.error(e);
     }
     finally{
-        client.end();
+        await client.end();
         console.log('done');
     }
 }
