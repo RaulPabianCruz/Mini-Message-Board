@@ -17,6 +17,10 @@ async function main() {
     else
         connectionString = process.env.CONNECTION_STRING;
 
+    if(process.env.DATABASE_URL)
+        console.log('DBURL: ' + process.env.DATABASE_URL);
+
+    console.log('node_env: ' + process.env.NODE_ENV);
     console.log('connectionString: ' + connectionString);
 
     const client = new Client({ connectionString: connectionString });
